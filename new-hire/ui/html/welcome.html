@@ -1,0 +1,56 @@
+<body>
+    <h1>
+        New Employee Onboarding Portal
+    </h1>
+    <br>
+    <h3>
+        Welcome to ServiceNow!
+    </h3>
+    <h4>
+        We are excited to have you on board as a new employee and looking forward to work with you.
+        <br><br>In order to expedite the Onboarding process, upload the below documents and complete your personal
+        information. This will allow us to get you setup as an employee in our payroll and benefits systems.
+    </h4>
+    <br>
+    <p>
+        Documents required:
+    </p>
+    <ul>
+        <li>Aadhar Card</li><br>
+
+        <li>PAN Card</li><br>
+
+        <li>Passport - First Page and Last Page</li><br>
+    </ul>
+
+    <input type="file" name="inputImage" id="inputImage" multiple
+        onchange="angular.element(this).scope().readFile(this)" />
+    <br><br>
+    <div id="preview"></div>
+    <br><br>
+
+    <div ng-if="uploaded">
+        <style>
+            .upload {
+                background-color: #80b6a1;
+                color: white;
+            }
+        </style>
+
+        <button ng-click="c.updateImage()" class="upload">Upload</button>
+    </div>
+
+    <div ng-if="conti">
+        <style>
+            .continue {
+                background-color: #293e40;
+                color: white;
+            }
+        </style>
+
+        <a href="https://k8s0017264-node1.thunder.lab3.service-now.com/sp/?id=profile_new_hire">
+            <button class="continue">Continue</button>
+        </a>
+    </div>
+
+</body>

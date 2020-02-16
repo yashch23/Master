@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+  color: Darkgreen;
+}
+
+h2{
+  color: Darkgreen;
+}
+
+p{
+  color: Darkgreen;
+}
+
+#imageDiv{float:right;
+margin-top: -275px;
+}
+
+.UIInput{float:left;}

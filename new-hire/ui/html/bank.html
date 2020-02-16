@@ -1,0 +1,101 @@
+<body>
+    <h1>
+        New Employee Onboarding Portal
+    </h1>
+    <br>
+    <h4>
+        Upload your bank cheque or provide your bank details for payroll setup.
+    </h4>
+    <br>
+
+    <input type="file" name="inputImage" id="inputImage" multiple
+        onchange="angular.element(this).scope().readFile(this)" />
+    <div id="bank_cheque">
+    </div>
+    <br><br>
+
+    <div ng-if="conti">
+        <style>
+            .continue {
+                background-color: #293e40;
+                color: white;
+            }
+        </style>
+    </div>
+
+    <div ng-if="uploaded">
+        <style>
+            .upload {
+                background-color: #80b6a1;
+                color: white;
+            }
+        </style>
+        <button ng-click="c.updateImage()" class="upload">Upload</button>
+    </div>
+
+    <br>
+    <table width="450px">
+        <tr>
+            <td valign="top">
+                <label for="bank_name">Bank Name</label>
+            </td>
+            <td valign="top">
+                <input id="bank_name" class="UIInput" type="text" name="bank_name" maxlength="50" size="30">
+            </td>
+        </tr>
+
+        <tr>
+            <td valign="top">
+                <label for="account_number">Account Number</label>
+            </td>
+            <td valign="top">
+                <input id="account_number" class="UIInput" type="text" name="account_number" maxlength="50" size="30">
+            </td>
+        </tr>
+
+        <tr>
+            <td valign="top">
+                <label for="account_type">Account Type</label>
+            </td>
+            <td>
+                <input type="radio" name="type" value="checking">
+                <label>Current</label>
+
+                <input type="radio" name="type" value="savings">
+                <label>Savings</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td valign="top">
+                <label for="ifsc_code">IFSC Code</label>
+            </td>
+            <td valign="top">
+                <input id="ifsc_code" class="UIInput" type="text" name="ifsc_code" maxlength="80" size="30">
+            </td>
+        </tr>
+
+        <tr>
+            <td valign="top">
+                <label for="micr_code">MICR Code</label>
+            </td>
+            <td valign="top">
+                <input id="micr_code" class="UIInput" type="text" name="micr_code" maxlength="80" size="30">
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <a href="https://k8s0017264-node1.thunder.lab3.service-now.com/sp?id=done_widget">
+        <button class="btn btn-primary">Done</button>
+    </a>
+
+    <br>
+    <canvas style="display:none" id="c1"></canvas>
+    <br><br>
+    <img id="preview" style="display:none" />
+    <br>
+
+</body>

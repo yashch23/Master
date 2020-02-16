@@ -1,0 +1,452 @@
+<body>
+  <h1>
+    New Employee Onboarding Portal
+  </h1>
+  <br>
+  <h4>
+    Please review and confirm your information. Ensure that the information matches the uploaded documents.
+  </h4>
+  <br>
+  <div id="wrapper" style="width:1020px; display:table;">
+
+    <div id="jsonOutput" style="width:600px; display:table-cell;">
+
+
+      <h3>
+        General Information
+      </h3>
+      <table width="600px">
+
+        <tr>
+          <td valign="top">
+            <label for="first_name">First Name*</label>
+          </td>
+          <td valign="top">
+            <input ng-model="c.data.firstName" type="text" name="first_name" id="firstName" size=30 required />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="middle_name">Middle Name</label>
+          </td>
+          <td valign="top">
+            <input ng-model="c.data.middleName" type="text" name="middle_name" id="middleName" size=30 required />
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <label for="last_name">Last Name*</label>
+          </td>
+          <td valign="top">
+            <input ng-model="c.data.lastName" type="text" name="last_name" id="lastName" size=30 required />
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td valign="top">
+            <label for="gender">Gender*</label>
+          </td>
+          <td>
+            <input list="gender" ng-model="c.data.gender" id="gender1" size=30 />
+            <datalist id="gender">
+              <option value='Male'>Male</option>
+              <option value='Female'>Female</option>
+            </datalist>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td valign="top">
+            <label for="dob">Date of Birth</label>
+          </td>
+          <td valign="top">
+            <input ng-model="c.data.dob" type="text" name="dob" id="dob" size=30 required>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td valign="top">
+            <label for="nationality">Nationality*</label>
+          </td>
+          <td valign="top">
+            <input list="nationality" ng-model="c.data.nationality" id="nationality1" size=30 />
+            <datalist id="nationality">
+              <option value="Afghan">Afghan</option>
+              <option value="Albanian">Albanian</option>
+              <option value="Algerian">Algerian</option>
+              <option value="American">American</option>
+              <option value="Andorran">Andorran</option>
+              <option value="Angolan">Angolan</option>
+              <option value="Antiguans">Antiguans</option>
+              <option value="argentinean">Argentinean</option>
+              <option value="armenian">Armenian</option>
+              <option value="australian">Australian</option>
+              <option value="austrian">Austrian</option>
+              <option value="azerbaijani">Azerbaijani</option>
+              <option value="bahamian">Bahamian</option>
+              <option value="bahraini">Bahraini</option>
+              <option value="bangladeshi">Bangladeshi</option>
+              <option value="barbadian">Barbadian</option>
+              <option value="barbudans">Barbudans</option>
+              <option value="batswana">Batswana</option>
+              <option value="belarusian">Belarusian</option>
+              <option value="belgian">Belgian</option>
+              <option value="belizean">Belizean</option>
+              <option value="beninese">Beninese</option>
+              <option value="bhutanese">Bhutanese</option>
+              <option value="bolivian">Bolivian</option>
+              <option value="bosnian">Bosnian</option>
+              <option value="brazilian">Brazilian</option>
+              <option value="british">British</option>
+              <option value="bruneian">Bruneian</option>
+              <option value="bulgarian">Bulgarian</option>
+              <option value="burkinabe">Burkinabe</option>
+              <option value="burmese">Burmese</option>
+              <option value="burundian">Burundian</option>
+              <option value="cambodian">Cambodian</option>
+              <option value="cameroonian">Cameroonian</option>
+              <option value="canadian">Canadian</option>
+              <option value="cape verdean">Cape Verdean</option>
+              <option value="central african">Central African</option>
+              <option value="chadian">Chadian</option>
+              <option value="chilean">Chilean</option>
+              <option value="chinese">Chinese</option>
+              <option value="colombian">Colombian</option>
+              <option value="comoran">Comoran</option>
+              <option value="congolese">Congolese</option>
+              <option value="costa rican">Costa Rican</option>
+              <option value="croatian">Croatian</option>
+              <option value="cuban">Cuban</option>
+              <option value="cypriot">Cypriot</option>
+              <option value="czech">Czech</option>
+              <option value="danish">Danish</option>
+              <option value="djibouti">Djibouti</option>
+              <option value="dominican">Dominican</option>
+              <option value="dutch">Dutch</option>
+              <option value="east timorese">East Timorese</option>
+              <option value="ecuadorean">Ecuadorean</option>
+              <option value="egyptian">Egyptian</option>
+              <option value="emirian">Emirian</option>
+              <option value="equatorial guinean">Equatorial Guinean</option>
+              <option value="eritrean">Eritrean</option>
+              <option value="estonian">Estonian</option>
+              <option value="ethiopian">Ethiopian</option>
+              <option value="fijian">Fijian</option>
+              <option value="filipino">Filipino</option>
+              <option value="finnish">Finnish</option>
+              <option value="french">French</option>
+              <option value="gabonese">Gabonese</option>
+              <option value="gambian">Gambian</option>
+              <option value="georgian">Georgian</option>
+              <option value="german">German</option>
+              <option value="ghanaian">Ghanaian</option>
+              <option value="greek">Greek</option>
+              <option value="grenadian">Grenadian</option>
+              <option value="guatemalan">Guatemalan</option>
+              <option value="guinea-bissauan">Guinea-Bissauan</option>
+              <option value="guinean">Guinean</option>
+              <option value="guyanese">Guyanese</option>
+              <option value="haitian">Haitian</option>
+              <option value="herzegovinian">Herzegovinian</option>
+              <option value="honduran">Honduran</option>
+              <option value="hungarian">Hungarian</option>
+              <option value="icelander">Icelander</option>
+              <option value="Indian">Indian</option>
+              <option value="indonesian">Indonesian</option>
+              <option value="iranian">Iranian</option>
+              <option value="iraqi">Iraqi</option>
+              <option value="irish">Irish</option>
+              <option value="israeli">Israeli</option>
+              <option value="italian">Italian</option>
+              <option value="ivorian">Ivorian</option>
+              <option value="jamaican">Jamaican</option>
+              <option value="japanese">Japanese</option>
+              <option value="jordanian">Jordanian</option>
+              <option value="kazakhstani">Kazakhstani</option>
+              <option value="kenyan">Kenyan</option>
+              <option value="kittian and nevisian">Kittian and Nevisian</option>
+              <option value="kuwaiti">Kuwaiti</option>
+              <option value="kyrgyz">Kyrgyz</option>
+              <option value="laotian">Laotian</option>
+              <option value="latvian">Latvian</option>
+              <option value="lebanese">Lebanese</option>
+              <option value="liberian">Liberian</option>
+              <option value="libyan">Libyan</option>
+              <option value="liechtensteiner">Liechtensteiner</option>
+              <option value="lithuanian">Lithuanian</option>
+              <option value="luxembourger">Luxembourger</option>
+              <option value="macedonian">Macedonian</option>
+              <option value="malagasy">Malagasy</option>
+              <option value="malawian">Malawian</option>
+              <option value="malaysian">Malaysian</option>
+              <option value="maldivan">Maldivan</option>
+              <option value="malian">Malian</option>
+              <option value="maltese">Maltese</option>
+              <option value="marshallese">Marshallese</option>
+              <option value="mauritanian">Mauritanian</option>
+              <option value="mauritian">Mauritian</option>
+              <option value="mexican">Mexican</option>
+              <option value="micronesian">Micronesian</option>
+              <option value="moldovan">Moldovan</option>
+              <option value="monacan">Monacan</option>
+              <option value="mongolian">Mongolian</option>
+              <option value="moroccan">Moroccan</option>
+              <option value="mosotho">Mosotho</option>
+              <option value="motswana">Motswana</option>
+              <option value="mozambican">Mozambican</option>
+              <option value="namibian">Namibian</option>
+              <option value="nauruan">Nauruan</option>
+              <option value="nepalese">Nepalese</option>
+              <option value="new zealander">New Zealander</option>
+              <option value="ni-vanuatu">Ni-Vanuatu</option>
+              <option value="nicaraguan">Nicaraguan</option>
+              <option value="nigerien">Nigerien</option>
+              <option value="north korean">North Korean</option>
+              <option value="northern irish">Northern Irish</option>
+              <option value="norwegian">Norwegian</option>
+              <option value="omani">Omani</option>
+              <option value="pakistani">Pakistani</option>
+              <option value="palauan">Palauan</option>
+              <option value="panamanian">Panamanian</option>
+              <option value="papua new guinean">Papua New Guinean</option>
+              <option value="paraguayan">Paraguayan</option>
+              <option value="peruvian">Peruvian</option>
+              <option value="polish">Polish</option>
+              <option value="portuguese">Portuguese</option>
+              <option value="qatari">Qatari</option>
+              <option value="romanian">Romanian</option>
+              <option value="russian">Russian</option>
+              <option value="rwandan">Rwandan</option>
+              <option value="saint lucian">Saint Lucian</option>
+              <option value="salvadoran">Salvadoran</option>
+              <option value="samoan">Samoan</option>
+              <option value="san marinese">San Marinese</option>
+              <option value="sao tomean">Sao Tomean</option>
+              <option value="saudi">Saudi</option>
+              <option value="scottish">Scottish</option>
+              <option value="senegalese">Senegalese</option>
+              <option value="serbian">Serbian</option>
+              <option value="seychellois">Seychellois</option>
+              <option value="sierra leonean">Sierra Leonean</option>
+              <option value="singaporean">Singaporean</option>
+              <option value="slovakian">Slovakian</option>
+              <option value="slovenian">Slovenian</option>
+              <option value="solomon islander">Solomon Islander</option>
+              <option value="somali">Somali</option>
+              <option value="south african">South African</option>
+              <option value="south korean">South Korean</option>
+              <option value="spanish">Spanish</option>
+              <option value="sri lankan">Sri Lankan</option>
+              <option value="sudanese">Sudanese</option>
+              <option value="surinamer">Surinamer</option>
+              <option value="swazi">Swazi</option>
+              <option value="swedish">Swedish</option>
+              <option value="swiss">Swiss</option>
+              <option value="syrian">Syrian</option>
+              <option value="taiwanese">Taiwanese</option>
+              <option value="tajik">Tajik</option>
+              <option value="tanzanian">Tanzanian</option>
+              <option value="thai">Thai</option>
+              <option value="togolese">Togolese</option>
+              <option value="tongan">Tongan</option>
+              <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+              <option value="tunisian">Tunisian</option>
+              <option value="turkish">Turkish</option>
+              <option value="tuvaluan">Tuvaluan</option>
+              <option value="ugandan">Ugandan</option>
+              <option value="ukrainian">Ukrainian</option>
+              <option value="uruguayan">Uruguayan</option>
+              <option value="uzbekistani">Uzbekistani</option>
+              <option value="venezuelan">Venezuelan</option>
+              <option value="vietnamese">Vietnamese</option>
+              <option value="welsh">Welsh</option>
+              <option value="yemenite">Yemenite</option>
+              <option value="zambian">Zambian</option>
+              <option value="zimbabwean">Zimbabwean</option>
+            </datalist>
+          </td>
+        </tr>
+
+      </table>
+
+      <br>
+
+      <h3>
+        Contact Details
+      </h3>
+
+      <table width="800px">
+
+        <tr>
+          <td valign="top">
+            <label for="permanent_address">Permanent Address*</label>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <label for="line1">Address Line 1</label>
+          </td>
+          <td>
+            <input ng-model="c.data.line_1" id="line_1" type="text" size=70>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <label for="line2">Address Line 2</label>
+          </td>
+          <td>
+            <input ng-model="c.data.line_2" id="line_2" type="text" size=70>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <label for="line3">Address Line 3</label>
+          </td>
+          <td>
+            <input ng-model="c.data.line_3" id="line_3" type="text" size=70>
+          </td>
+        </tr>
+
+        <div ng-if="click">
+          <tr>
+            <td valign="top">
+              <input type="checkbox" name="checkbox" ng-model='sameAddress' ng-change='sameAddress && copyAddress()'>
+            </td>
+            <td>
+              <label>
+                Check this box if current address is same as permanent address.
+              </label>
+
+            </td>
+          </tr>
+        </div>
+
+        <tr>
+          <td valign="top">
+            <label for="current_address">Current Address*</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <label for="line1">Address Line 1</label>
+          </td>
+          <td>
+            <input type="text" ng-disabled="sameAddress" value={{data.line1}} id="line1" size=70>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <label for="line2">Address Line 2</label>
+          </td>
+          <td valign="top">
+            <input type="text" ng-disabled="sameAddress" value={{data.line2}} id="line2" size=70>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <label for="line3">Address Line 3</label>
+          </td>
+          <td valign="top">
+            <input type="text" ng-disabled="sameAddress" value={{data.line3}} id="line3" size=70 required />
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <label for="email">Email Address</label>
+          </td>
+          <td valign="top">
+            <input ng-model="c.data.email" type="text" name="email" id="email" size=30>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <label for="phone_number">Contact Number*</label>
+          </td>
+          <td valign="top">
+            <input ng-model="c.data.contact" input type="text" name="contactNumber" id="contactNumber" size=30 required>
+          </td>
+        </tr>
+
+      </table>
+
+      <br><br>
+
+      <h3>
+        Government IDs
+      </h3>
+
+      <table width="500px">
+
+        <tr>
+          <td valign="top">
+            <label for="passport_number">Passport Number*</label>
+          </td>
+          <td valign="top">
+            <input ng-model="c.data.passport" type="text" id="passportNumber" size=30>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <label for="pan_number">PAN Number*</label>
+          </td>
+          <td valign="top">
+            <input ng-model="c.data.pan" type="text" name="pan_number" id="panNumber" size=30>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <label for="aadhar_number">Aadhar Number*</label>
+          </td>
+          <td valign="top">
+            <input ng-model="c.data.aadhar" type="text" name="aadhar_number" id="aadharNumber" size=30>
+          </td>
+        </tr>
+
+      </table>
+
+      <br><br>
+      <input type="checkbox" ng-model="c.data.isConfirmed" name="confirmation" id="confirmation" required />
+      I hereby confirm that the information provided is accurate, correct and complete and that the documents submitted
+      are genuine.
+    </div>
+
+  </div><br>
+
+  <div ng-if="confirmDetails">
+    <style>
+      .confirmDetails {
+        background-color: #80b6a1;
+        color: white;
+      }
+    </style>
+    <button type="submit" ng-click="saved(); clicked();" class="confirmDetails">Accept</button>
+  </div>
+
+  <div ng-if="confirmed">
+    <style>
+      .confirmed {
+        background-color: #293e40;
+        color: white;
+      }
+    </style>
+    <a href="https://k8s0017264-node1.thunder.lab3.service-now.com/sp/?id=bank_details_new_hire">
+      <button class="confirmed">Continue</button>
+    </a>
+  </div>
+</body>
